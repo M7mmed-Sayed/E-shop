@@ -10,8 +10,7 @@ const Wrapper = styled.div`
     padding: 10px 20px;
     display: flex;
     align-items: center;
-
-    justify-content: space-betwwen;
+    justify-content: space-between;
 `
 const Left = styled.div`
     flex: 1;
@@ -33,10 +32,12 @@ const SearchContainer = styled.div`
 `
 const Center = styled.div`
     flex: 1;
+    text-align: center;
 `
 const Logo = styled.h1`
-font-wight=bold;
-text-align:center;
+    font-weight: bold;
+    margin: 0px;
+    align-items: center;
 `
 const Right = styled.div`
     flex: 1;
@@ -74,7 +75,6 @@ const Navbar = () => {
                     </MenuItem>
                 </Right>
             </Wrapper>
-            Navbar
         </Container>
     )
 }
