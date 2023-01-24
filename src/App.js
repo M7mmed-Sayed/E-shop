@@ -1,9 +1,10 @@
 import './App.css'
-import Cart from './pages/Cart'
+import Register from './pages/Register'
 import Product from './pages/Product'
+import ProductList from './pages/ProductList'
 
 function App() {
-    return <Cart />
+    return <Register />
 }
 
 export default App

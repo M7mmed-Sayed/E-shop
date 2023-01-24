@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
 import { Add, Remove } from '@mui/icons-material'
-import { mobile } from '../responsive'
+import { mobile, tablet } from '../responsive'
 const Container = styled.div``
 const Wrapper = styled.div`
     padding: 20px;
@@ -35,6 +35,9 @@ const TextContainer = styled.div`
     ${mobile({
         display: 'none',
     })}
+    ${tablet({
+        display: 'none',
+    })}
 `
 const TopText = styled.span`
     text-decoration: underline;
@@ -45,6 +48,9 @@ const Buttom = styled.div`
     display: flex;
     justify-content: space-between;
     ${mobile({
+        flexDirection: 'column',
+    })}
+    ${tablet({
         flexDirection: 'column',
     })}
 `

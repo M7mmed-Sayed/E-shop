@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {mobile}from "../responsive"
+import {mobile, tablet}from "../responsive"
 const Container = styled.div`
     width: 100vw;
     height: 100vh;
@@ -19,7 +19,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
     width: 25%;
     padding: 20px;
-    ${mobile({
+    ${tablet({
         width: '80%',
     })}
     background-color: white;

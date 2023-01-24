@@ -10,12 +10,14 @@ import {
     Telegram,
     Twitter,
 } from '@mui/icons-material'
-import { mobile } from '../responsive'
+import { mobile, tablet } from '../responsive'
 
 const Container = styled.div`
     display: flex;
-    
-    ${mobile({
+
+     ${tablet({
+        alignItems: 'center',
+        justfyContent: 'center',
         flexDirection: 'column',
     })}
 `
@@ -24,6 +26,11 @@ const Left = styled.div`
     display: flex;
     flex-direction: column;
     padding: 20px;
+    ${tablet({
+        alignItems: 'center',
+        justfyContent: 'center',
+        flexDirection: 'column',
+    })}
 `
 const Logo = styled.h1``
 const Description = styled.p`
@@ -48,12 +55,20 @@ const SocialIcon = styled.div`
 const Center = styled.div`
     flex: 1;
     padding: 25px;
-    ${mobile({
+    
+    ${tablet({
         display: 'none',
     })}
 `
 const Title = styled.h3`
     margin-bottom: 45px;
+`
+const Right = styled.div`
+    flex: 1;
+    padding: 20px;
+    ${mobile({
+    })}
+    
 `
 const List = styled.ul`
     margin: 0;
@@ -61,18 +76,16 @@ const List = styled.ul`
     width: 100%;
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    ${tablet({
+      
+        flexDirection: 'column',
+    })}
 `
 const ListItem = styled.li`
     width: 50%;
     margin-bottom: 10px;
-`
-const Right = styled.div`
-    flex: 1;
-    padding: 20px;
-    ${mobile({
-        backgroundColor: '#eee',
-    })}
+   
 `
 const ConectItem = styled.li`
     margin-bottom: 20px;

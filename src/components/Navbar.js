@@ -1,8 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import Badge from '@mui/material/Badge'
-import { Search, ShoppingCartOutlined } from '@mui/icons-material'
-import { mobile } from '../responsive'
+import {
+    LanguageOutlined,
+    Search,
+    ShoppingCartOutlined,
+} from '@mui/icons-material'
+import { mobile, tablet } from '../responsive'
 const Container = styled.div`
     height: 60px;
     ${mobile({
@@ -23,7 +27,7 @@ const Left = styled.div`
     display: flex;
     align-items: center;
 `
-const Language = styled.span`
+const Language = styled.div`
     font-size: 14px;
     cursor: pointer;
     ${mobile({
@@ -32,16 +36,24 @@ const Language = styled.span`
 `
 const Input = styled.input`
     border: none;
+    outline:none;
     ${mobile({
         width: '50px',
+    })}
+    ${tablet({
+        width: '70px',
     })}
 `
 const SearchContainer = styled.div`
     border: 0.5px solid lightgray;
     align-items: center;
     margin-left: 30px;
+    border-radius:10px;
     display: flex;
     padding: 5px;
+    ${tablet({
+        marginLeft: '10px',
+    })}
 `
 const Center = styled.div`
     flex: 1;
@@ -56,12 +68,13 @@ const Logo = styled.h1`
     })}
 `
 const Right = styled.div`
-    flex: 2;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    ${mobile({
+    ${tablet({
         justifyContent: 'center',
+        flex:'2',
     })}
 `
 const MenuItem = styled.div`
@@ -70,7 +83,7 @@ const MenuItem = styled.div`
     margin-left: 25px;
     ${mobile({
         fontSize: '12px',
-        marginLeft:'10px'
+        marginLeft: '10px',
     })}
 `
 
@@ -79,7 +92,9 @@ const Navbar = () => {
         <Container className="container">
             <Wrapper>
                 <Left>
-                    <Language>En</Language>
+                    <Language>
+                        <LanguageOutlined />
+                    </Language>
                     <SearchContainer>
                         <Input placeholder="Search" />
                         <Search style={{ color: 'gray', fontSize: 16 }} />

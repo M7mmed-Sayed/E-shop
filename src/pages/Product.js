@@ -4,12 +4,12 @@ import styled from 'styled-components'
 import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import { mobile } from '../responsive'
+import { mobile, tablet } from '../responsive'
 const Container = styled.div``
 const Wrapper = styled.div`
     padding: 20px;
     display: flex;
-    ${mobile({
+    ${tablet({
         padding: '10px',
         flexDirection: 'column',
     })}
@@ -80,7 +80,7 @@ const AddContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    ${mobile({
+    ${tablet({
         width: '100%',
     })}
 `

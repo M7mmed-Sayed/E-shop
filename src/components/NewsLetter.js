@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Send } from '@mui/icons-material'
-import { mobile } from '../responsive'
+import { mobile, tablet } from '../responsive'
 
 const Container = styled.div`
     height: 60vh;
@@ -33,7 +33,7 @@ const InputContainer = styled.div`
     justify-content: space-between;
     border: 1px solid lightgray;
 
-    ${mobile({
+    ${tablet({
         width: '80%',
     })}
 `
