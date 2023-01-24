@@ -9,6 +9,8 @@ import {
 import { mobile, tablet } from '../responsive'
 const Container = styled.div`
     height: 60px;
+    box-shadow: 0px 3px 0px 0px #2e2f30;
+    margin-bottom:8px;
     ${mobile({
         hight: '50px',
     })}
@@ -36,7 +38,7 @@ const Language = styled.div`
 `
 const Input = styled.input`
     border: none;
-    outline:none;
+    outline: none;
     ${mobile({
         width: '50px',
     })}
@@ -48,7 +50,7 @@ const SearchContainer = styled.div`
     border: 0.5px solid lightgray;
     align-items: center;
     margin-left: 30px;
-    border-radius:10px;
+    border-radius: 10px;
     display: flex;
     padding: 5px;
     ${tablet({
@@ -74,7 +76,7 @@ const Right = styled.div`
     justify-content: flex-end;
     ${tablet({
         justifyContent: 'center',
-        flex:'2',
+        flex: '2',
     })}
 `
 const MenuItem = styled.div`

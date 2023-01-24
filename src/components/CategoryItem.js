@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { mobile } from '../responsive'
+import { mobile, tablet } from '../responsive'
 const Container = styled.div`
     flex: 1;
     margin: 3px;
     height: 70vh;
     position: relative;
-    background-color:black;
+    background-color: black;
 `
 const Image = styled.img`
     width: 100%;
@@ -25,16 +25,18 @@ const Info = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
 `
 const Title = styled.h1`
-color:white;
-margin-bottom: 20px;
+    color: white;
+    margin-bottom: 20px;
+    ${tablet({
+        fontSize: '120%',
+    })}
 `
 const Button = styled.button`
-    min-width: 200px;
-    min-height: 60px;
+    width:200px;
     font-family: 'Nunito', sans-serif;
     font-size: 22px;
     letter-spacing: 1.3px;
@@ -50,7 +52,11 @@ const Button = styled.button`
     box-shadow: 12px 12px 24px rgba(15, 51, 47, 0.64);
     cursor: pointer;
     padding: 10px;
-    
+    ${tablet({
+        width: '40%',
+            fontSize: '120%',
+
+    })}
 `
 const CategoryItem = ({ item }) => {
     return (

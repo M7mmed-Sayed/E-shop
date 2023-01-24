@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material'
 import { slidItems } from '../data'
 import '../CSS/test.css'
-import { mobile } from '../responsive'
+import { tablet } from '../responsive'
 const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
     position: relative;
     overflow: hidden;
-    ${mobile({
+    ${tablet({
         display:"none"
     })}
 `

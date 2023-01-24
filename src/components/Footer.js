@@ -66,6 +66,8 @@ const Title = styled.h3`
 const Right = styled.div`
     flex: 1;
     padding: 20px;
+    display:flex;
+    flex-direction:column;
     ${mobile({
     })}
     
@@ -77,10 +79,11 @@ const List = styled.ul`
     list-style: none;
     display: flex;
     flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
     ${tablet({
-      
         flexDirection: 'column',
-    })}
+    })};
 `
 const ListItem = styled.li`
     width: 50%;

@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import { categories } from '../data'
-import { mobile } from '../responsive'
+import { tablet } from '../responsive'
 import CategoryItem from './CategoryItem'
 const Container = styled.div`
     display: flex;
     padding: 20px;
     justify-content: space-between;
 
-    ${mobile({
+    ${tablet({
         flexDirection: 'column',
-        padding:"0px"
+        padding: '0px',
+        margin: '15px 0px',
     })}
 `
 const Categories = () => {
